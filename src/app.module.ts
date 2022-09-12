@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { User } from './users/user.entity';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { User } from './users/user.entity';
       retryDelay: 3000, // 연결 재시도 간격(ms)(기본값: 3000)
       synchronize: true, // 운영환경에서는 false로 변경 필요
     }),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

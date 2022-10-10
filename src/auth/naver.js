@@ -2,10 +2,10 @@ import express from 'express';
 import request from 'request';
 
 var app = express();
-var client_id = '33bwuEr3MRF48uLRsdrj';
-var client_secret = 'YMGkKAGS0j';
+var client_id = 'fpoMSCcL_n8jI5PI_hF7';
+var client_secret = 'xjkF4mrTPo';
 var state = 'RANDOM_STATE';
-var redirectURI = encodeURI('YOUR_CALLBACK_URL');
+var redirectURI = encodeURI('http://localhost');
 var api_url = '';
 app.get('/naverlogin', function (req, res) {
   api_url =
